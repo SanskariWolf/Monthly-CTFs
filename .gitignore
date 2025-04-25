@@ -1,0 +1,50 @@
+# --- Python Virtual Environment ---
+# Usually contains installed packages and binaries specific to the local setup.
+# Recreate using requirements.txt
+/venv/
+/pyvenv.cfg
+# If you use other venv names sometimes:
+# /env/
+# /.venv/
+
+# --- Python Bytecode and Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ghidra Project Files ---
+# .gpr file: Keep this - it defines the project structure.
+# !Flash-CTFs.gpr # Explicitly uncomment if you want to ensure it's *not* ignored by another rule
+
+# .rep directory: Contains Ghidra's internal data, analysis, user actions, etc.
+# This can become very large and contains volatile/local data. Usually not shared.
+/Flash-CTFs.rep/
+
+# Lock files: Temporary files indicating the project is open or recovering.
+*.lock
+*.lock~
+
+# Other potential Ghidra temporary/backup files (often start with ~)
+# The /Flash-CTFs.rep/ rule covers these if they are inside,
+# but adding patterns for files starting with ~ is good practice.
+/~*
+
+# --- Distribution / packaging ---
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# --- OS / Editor Files ---
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# --- IDE specific files (optional, add as needed) ---
+# .vscode/
+# .idea/
